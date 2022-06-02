@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yein's WebSite</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.nav-home').click(function () {
+                $('#p_home').css('display', 'block'); $('#p_favorite').css('display', 'none'); $('#p_aboutme').css('display', 'none');
+                $('.nav-home').css('font-weight', 'bold'); $('.nav-fav').css('font-weight', '100'); $('.nav-me').css('font-weight', '100');
+            });
+        });
+        $(document).ready(function () {
+            $('.nav-fav').click(function () {
+                $('#p_home').css('display', 'none'); $('#p_favorite').css('display', 'block'); $('#p_aboutme').css('display', 'none');
+                $('.nav-home').css('font-weight', '100'); $('.nav-fav').css('font-weight', 'bold'); $('.nav-me').css('font-weight', '100');
+                $
+            });
+        });
+        $(document).ready(function () {
+            $('.nav-me').click(function () {
+                $('#p_home').css('display', 'none'); $('#p_favorite').css('display', 'none'); $('#p_aboutme').css('display', 'block');
+                $('.nav-home').css('font-weight', '100'); $('.nav-fav').css('font-weight', '100'); $('.nav-me').css('font-weight', 'bold');
+            });
+        });
+    </script>
+    <style>
+        .title { float: left; margin-left: 50px; font-family: Courier;}
+
+        body {position:relative; min-height: 100%; margin: 0;}
+
+        .nav { top: 0; left: 0; right: 0; position: fixed; background: linear-gradient(180deg, rgb(201, 221, 255) 40%, #FFFFFF 100% );}
+        .nav-bar { float: right; }
+        .nav-bar > li { float: left; display: inline; margin:10px; font-size: 15px; font-family:Arial, Helvetica, sans-serif; text-shadow: 1px 1px 0px lightgray}
+        .nav-me { margin-right: 30px; }
+        .nav-home {font-weight: bold;}
+
+        a { text-decoration: none; color: rgb(255, 255, 255); }
+        a:hover {color:rgb(192, 192, 192)}
+
+        .content {padding: 100px 0 20px 0; }
+        .page {margin-bottom: 30px;}
+
+        #p_home {padding: 30px 70px 70px 70px;}
+        .pic { height: 170px; width: 170px; margin: 25px auto; border-radius: 30px; display: block; }
+        .profile {background: linear-gradient(120deg, rgb(255, 243, 251) 20%, lightblue 100%); border: 2px solid rgb(219, 219, 219); border-radius: 30px; height: 100%; text-align: center; font-family: Courier;}
+        .profile > p { font-weight: bold; color:gray; margin:10px; }
+        .sns {width:30px; height:30px; margin:20px;}
+        .sns:hover {box-shadow: 0 0 20px gray;}
+
+        #p_favorite { display: none; }
+        #p_favorite > h3 {text-align: center; font-style: italic; font-weight: 100; margin-top: 30px;}
+        .fav-pic {margin-left: auto; margin-right: auto; margin-bottom: 100px;} 
+        td > img {width:200px; height:200px; margin:1px 3px;}
+        td > img:hover {box-shadow: 5px 5px 50px black;}
+        
+        #p_aboutme { display: none; margin: 10px 10px 50px 10px;}
+        #p_aboutme > h3 { margin-left:10px; font-weight: 200; margin-top: 30px;}
+        .me {padding: 3px 20px;}
+        .me:hover {background-color: rgb(239, 245, 255);}
+        .me > ul {padding-left: 20px;}
+        .me > ul > li {color: rgb(79, 79, 79); list-style: none;}
+        hr {background-color: gray; border-bottom: 0px;}
+        
+        .footer {position: absolute; left:0; right:0; bottom: 0px; height:40px; padding: 0 25px; border-top:1px solid #dee5e7; text-align: center; color: gray; font-size: 10px;}
+
+        @media screen and (max-width: 767px) {
+            .title {text-align:center; }
+            .nav-bar > li {font-size: 10px; }
+            td > img {width:100px; height:100px;}
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <h2 class="title">YEIN KIM</h2>
+        <ul class="nav-bar">
+            <li><a class="nav-home" href="#home">HOME</a></li>
+            <li><a class="nav-fav" href="#favorite">FAVORITE</a></li>
+            <li><a class="nav-me" href="#aboutme">ABOUT ME</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="page">
+                <div id="p_home">
+                    <div class="profile">
+                        <img class="pic" src="pic.JPG">
+                        <h3>= My Profile =</h3>
+                        <p>#Name : Yein Kim</p>
+                        <p>#Age : 21</p>
+                        <p>#Mbti : ENFJ</p>
+                        <p>#Date of Birth : November 19, 2002</p>
+                        <p>#Major : Computer Engineering</p>
+                        <P>#Nationality : Chuncheon, Korea</P>
+                        <a href="https://www.instagram.com/yeinee.k/">
+                            <img class="sns" src="instagram.png">
+                        </a>
+                        <a href="https://blog.naver.com/1119hope">
+                            <img class="sns" src="blog.png">
+                        </a>
+                        <a href="mailto:1119hope@naver.com">
+                            <img class="sns" src="email.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                    <div id="p_favorite">
+                        <h3>My Favorite Things!</h3>
+                        <table class="fav-pic">
+                            <tr>
+                                <td><img src="fav1.jpg"></td>
+                                <td><img src="fav2.jpg"></td>
+                                <td><img src="fav3.jpg"></td>
+                            </tr>
+                            <tr>
+                                <td><img src="fav4.jpg"></td>
+                                <td><img src="fav5.jpg"></td>
+                                <td><img src="fav6.jpg"></td>
+                            </tr>
+                            <tr>
+                                <td><img src="fav7.jpg"></td>
+                                <td><img src="fav8.jpg"></td>
+                                <td><img src="fav9.jpg"></td>
+                            </tr>                                
+                        </table>
+                    </div>
+                
+            </div>
+
+            <div class="page">
+                    <div id="p_aboutme" >
+                        <h3>Information about me : )</h3>
+                        <hr>
+                        <div class="me">
+                            <h3>Graduation</h3>
+                            <ul>
+                                <li>The Attached Elementary School of Chuncheon National University of Education</li>
+                                <li>Yubong Girls' Middle School</li>
+                                <li>Yubong Girls' High School</li>
+                            </ul>
+                        </div>
+                        <div class="me">
+                            <h3># that describe me</h3>
+                            <ul>
+                                <li>#Basic</li>
+                                <li>#Trend Fllower</li>
+                                <li>#Puppy Collector</li>
+                            </ul>
+                        </div>
+                        <div class="me">
+                            <h3>motto</h3>
+                            <ul>
+                                <li>Action is the foundational key to all success</li>
+                                <li>The merit of an action lies in finishing it to the end </li>
+                            </ul>
+                        </div>
+                        <div class="me">
+                            <h3>Interest</h3>
+                            <ul>
+                                <li>Web/app application development</li>
+                                <li>Design (Illustration & Photoshop)</li>
+                                <li>Sustainable Recycling & Upcycling </li>
+                            </ul>
+                        </div>
+                        <div class="me">
+                            <h3>Hobby</h3>
+                            <ul>
+                                <li>Taking a walk with my dog</li>
+                                <li>Copying K-pop or Girl's hip-hop choreography</li>
+                                <li>Watching drama series all at once</li>
+                            </ul>
+                        </div>
+                        <div class="me">
+                            <h3>Let me introduce myself a little bit more...</h3>
+                            <ul>
+                                <li>I like learning that produces accurate calculation results</li>
+                                <li>I enjoy dynamic activities like running</li>
+                                <li>I like making plans and organizing my surroundings</li>
+                                <li>I also consider myself to be a perfectionist (But I don't think I have enough practical skills ;-;)</li>
+                                <li>People who see me for the first time say it's hard to approach me, but I'm a very friendly person!</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="main-footer">
+            <footer class="footer">
+                <p>Copyrightⓒ 2022. Yein Kim. All rights reserved. </p>
+            </footer>
+        </div>
+</body>
+</html>
